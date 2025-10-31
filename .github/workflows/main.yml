@@ -32,5 +32,5 @@ jobs:
           pytest tests/
 
       - name: Generate README
-        run: python scripts/generate_readme.p
+        run: python scripts/generate_readme.py
 
