@@ -1,4 +1,4 @@
-from main import add, multiply
+from lab2.main import add, multiply
 
 def test_add():
     assert add(2, 3) == 5
