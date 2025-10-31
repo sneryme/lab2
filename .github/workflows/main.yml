@@ -34,4 +34,5 @@ jobs:
       - name: Generate documentation
         run: |
           mkdir -p docs_html
-          python -m pdoc --output-dir docs_html main.py
+          python -m pdoc --output-dir docs_html main
+      
