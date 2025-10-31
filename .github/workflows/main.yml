@@ -1,0 +1,30 @@
+name: CI
+
+# Запуск workflow при пуше в любой branch
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Клонируем репозиторий
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Шаг 2: Устанавливаем Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Шаг 4: Запуск unit-тестов
+      - name: Run tests
+        run: |
+          pytest
