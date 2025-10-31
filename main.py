@@ -6,6 +6,9 @@ def add(a, b):
 def multiply(a, b):
     """Функция умножает два числа."""
     return a * b
+def subtract(a, b):
+    """Вычитает b из a."""
+    return a - b
 
 
 if __name__ == "__main__":
