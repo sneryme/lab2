@@ -31,8 +31,6 @@ jobs:
           export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest tests/
 
-      - name: Generate documentation
-        run: |
-          mkdir -p docs_html
-          python -m pdoc --output-dir docs_html main
-      
+      - name: Generate README
+        run: python scripts/generate_readme.p
+
